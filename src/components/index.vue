@@ -40,7 +40,7 @@ export default {
 <style lang="less">
 .index {
   max-width: 70%;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 .ant-tabs-nav-container {
   text-align: center;
