@@ -1,19 +1,23 @@
 # online-tool
 
-> 在线开发工具
+> 在线网页开发小工具
+
+主要功能：
+
+- UUID 生成
+- AES 加密/解密
+- Base64 加密/解密
+- MD5 加密/解密
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
-npm install
+yarn install
 
 # serve with hot reload at localhost:8080
-npm run dev
+yarn start
 
 # build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+yarn build -r
 ```
