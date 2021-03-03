@@ -1,10 +1,10 @@
 <template>
-  <a-form-model ref="form" :model="data" :rules="rules" layout="horizontal">
+  <a-form-model ref="form" :model="data" :rules="rules" :label-col="labelCol" :wrapper-col="wrapperCol">
     <a-form-model-item label="生成数量" prop="count">
-      <a-input-number v-model="data.count" :min="1" :max="10" />
+      <a-input type="number" v-model="data.count" />
     </a-form-model-item>
-    <a-form-model-item label="生成的uuid">
-      <a-input v-model="data.value" type="textarea" />
+    <a-form-model-item label="生成">
+      <a-textarea v-model="data.value" :rows="5" />
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" @click="generate">
@@ -22,6 +22,8 @@ export default {
   name: 'uuid',
   data() {
     return {
+      labelCol: { span: 4 },
+      wrapperCol: { span: 14 },
       data: {
         count: 1,
         value: ''
@@ -29,7 +31,14 @@ export default {
       rules: {
         count: [
           { required: true, message: '请输入生成数量', trigger: 'blur' },
-          { min: 1, max: 10, message: '生成数量大于1小于10', trigger: 'blur' }
+          {
+            validator: (rule, value, callback) => {
+              if (value < 1 || value > 10) {
+                return callback('生成数量大于1小于10');
+              }
+              return callback();
+            }
+          }
         ]
       }
     };
@@ -39,10 +48,16 @@ export default {
       this.data.value = '';
     },
     generate() {
-      this.data.value = sp.newUUID();
+      this.$refs.form.validate(resp => {
+        if (resp) {
+          const uuids = [];
+          for (let i = 0; i < this.data.count; i++) {
+            uuids.push(sp.newUUID());
+          }
+          this.data.value = uuids.join('\r\n');
+        }
+      });
     }
   }
 };
 </script>
-
-<style></style>
