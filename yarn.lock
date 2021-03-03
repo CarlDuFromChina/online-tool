@@ -4299,6 +4299,11 @@ js-base64@^2.1.9:
   resolved "http://npm.karldu.cn/js-base64/-/js-base64-2.6.4.tgz#f4e686c5de1ea1f867dbcad3d46d969428df98c4"
   integrity sha1-9OaGxd4eofhn28rT1G2WlCjfmMQ=
 
+js-base64@^3.6.0:
+  version "3.6.0"
+  resolved "http://npm.karldu.cn/js-base64/-/js-base64-3.6.0.tgz#773e1de628f4f298d65a7e9842c50244751f5756"
+  integrity sha1-dz4d5ij08pjWWn6YQsUCRHUfV1Y=
+
 js-md5@^0.7.3:
   version "0.7.3"
   resolved "http://npm.karldu.cn/js-md5/-/js-md5-0.7.3.tgz#b4f2fbb0b327455f598d6727e38ec272cd09c3f2"
@@ -7785,12 +7790,13 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-web-core@1.0.7:
-  version "1.0.7"
-  resolved "http://npm.karldu.cn/web-core/-/web-core-1.0.7.tgz#e8558c1fcc457c97aa73e8b7512cee4dee3134ac"
-  integrity sha512-OI6Mj2KMiQ+mgxbd7QNM9CIk8cDStlT335BuXsb/4M95pHx0PYBKtufAfjMAYs2y0EC9wH5bZ3hKQ1yrEuHNbA==
+web-core@1.0.8:
+  version "1.0.8"
+  resolved "http://npm.karldu.cn/web-core/-/web-core-1.0.8.tgz#3f6d24c661b2e945b309d4b8e09db9b219a89211"
+  integrity sha512-+goLj8wgCJXvz2FxNTj7cO1TSroHrKkQayPBQwdb8LQ9hHbUfNfuASDivO9FVw2REEmRTWpCxbiWlv6jVA4eyg==
   dependencies:
     current-device "^0.10.2"
+    js-base64 "^3.6.0"
     js-md5 "^0.7.3"
     jsencrypt "^3.0.0"
     uuidjs "^4.2.4"

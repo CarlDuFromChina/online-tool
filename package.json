@@ -16,7 +16,7 @@
     "ant-design-vue": "^1.7.4",
     "vue": "^2.6.11",
     "vue-router": "^3.0.1",
-    "web-core": "1.0.7"
+    "web-core": "1.0.8"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

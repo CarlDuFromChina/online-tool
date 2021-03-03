@@ -7,7 +7,7 @@
       Content of Tab Pane 2
     </a-tab-pane>
     <a-tab-pane key="3" tab="Base64加密/解密">
-      Content of Tab Pane 3
+      <base64></base64>
     </a-tab-pane>
     <a-tab-pane key="4" tab="MD5加密">
       <md5></md5>
@@ -18,10 +18,11 @@
 <script>
 import uuid from './uuid';
 import md5 from './md5';
+import base64 from './base64';
 
 export default {
   name: 'index',
-  components: { uuid, md5 },
+  components: { uuid, md5, base64 },
   data() {
     return {
       tabIndex: '1'
