@@ -4,9 +4,9 @@
       <a-input type="number" v-model="data.count" />
     </a-form-model-item>
     <a-form-model-item label="生成">
-      <a-textarea v-model="data.value" :rows="5" />
+      <a-textarea v-model="data.value" :rows="data.count > 5 ? 10 : 5" />
     </a-form-model-item>
-    <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
+    <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }" style="text-align: right">
       <a-button type="primary" @click="generate">
         生成
       </a-button>

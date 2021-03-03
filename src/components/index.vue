@@ -1,5 +1,5 @@
 <template>
-  <a-tabs default-active-key="1" @change="changeTab">
+  <a-tabs default-active-key="1" @change="changeTab" class="index">
     <a-tab-pane key="1" tab="uuid生成">
       <uuid></uuid>
     </a-tab-pane>
@@ -36,4 +36,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="less">
+.index {
+  max-width: 70%;
+  margin: 0 auto;
+}
+.ant-tabs-nav-container {
+  text-align: center;
+}
+</style>

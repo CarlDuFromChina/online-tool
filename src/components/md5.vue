@@ -6,7 +6,7 @@
     <a-form-model-item label="加密后结果">
       <a-textarea v-model="data.value" :rows="5" />
     </a-form-model-item>
-    <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
+    <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }" style="text-align: right">
       <a-button type="primary" @click="generate">
         生成
       </a-button>
@@ -25,7 +25,7 @@ export default {
       labelCol: { span: 4 },
       wrapperCol: { span: 14 },
       data: {
-        orginValue: 1,
+        orginValue: '',
         value: ''
       },
       rules: {
