@@ -17,4 +17,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 60px;
 }
+
+body {
+  background: #ececec;
+}
 </style>

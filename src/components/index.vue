@@ -41,6 +41,7 @@ export default {
 .index {
   max-width: 70%;
   margin: 0 auto !important;
+  background: white;
 }
 .ant-tabs-nav-container {
   text-align: center;
