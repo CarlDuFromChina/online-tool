@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { uuid } from 'web-core';
+
 export default {
   name: 'uuid',
   data() {
@@ -52,7 +54,7 @@ export default {
         if (resp) {
           const uuids = [];
           for (let i = 0; i < this.data.count; i++) {
-            uuids.push(sp.newUUID());
+            uuids.push(uuid.generate());
           }
           this.data.value = uuids.join('\r\n');
         }

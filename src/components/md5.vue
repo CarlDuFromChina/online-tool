@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { encrypt } from 'web-core';
+
 export default {
   name: 'uuid',
   data() {
@@ -40,7 +42,7 @@ export default {
     generate() {
       this.$refs.form.validate(resp => {
         if (resp) {
-          this.data.value = sp.md5Encrypt(this.data.orginValue);
+          this.data.value = encrypt.md5.encrypt(this.data.orginValue);
         }
       });
     }

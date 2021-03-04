@@ -7795,11 +7795,12 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-web-core@1.0.8:
-  version "1.0.8"
-  resolved "http://npm.karldu.cn/web-core/-/web-core-1.0.8.tgz#3f6d24c661b2e945b309d4b8e09db9b219a89211"
-  integrity sha512-+goLj8wgCJXvz2FxNTj7cO1TSroHrKkQayPBQwdb8LQ9hHbUfNfuASDivO9FVw2REEmRTWpCxbiWlv6jVA4eyg==
+web-core@1.0.10:
+  version "1.0.10"
+  resolved "http://npm.karldu.cn/web-core/-/web-core-1.0.10.tgz#b9b420db0b0d300e477c45c794ca587daf537fda"
+  integrity sha512-+DF5+iChhqvPoTZJrJiRG/8qq8WMgFcjPE2npuLJvzrlSjzIpMFYhWtK5KeVpRYp4/seZXRkBPstboCbnYV2yw==
   dependencies:
+    crypto-js "^4.0.0"
     current-device "^0.10.2"
     js-base64 "^3.6.0"
     js-md5 "^0.7.3"

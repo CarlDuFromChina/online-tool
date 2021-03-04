@@ -12,12 +12,11 @@
   },
   "dependencies": {
     "ant-design-vue": "^1.7.4",
-    "crypto-js": "^4.0.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.0.1",
-    "web-core": "1.0.8"
+    "web-core": "1.0.10"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import * as util from '../utils/aesUtil';
+import { encrypt } from 'web-core';
 
 export default {
   name: 'aes',
@@ -45,14 +45,14 @@ export default {
     },
     encode() {
       if (!sp.isNullOrEmpty(this.data.orginValue)) {
-        this.data.value = util.encrypt(this.data.orginValue, this.data.key);
+        this.data.value = encrypt.aes.encrypt(this.data.orginValue, this.data.key);
       } else {
         this.$message.error('请输入加密内容');
       }
     },
     decode() {
       if (!sp.isNullOrEmpty(this.data.value)) {
-        this.data.orginValue = util.decrypt(this.data.value, this.data.key);
+        this.data.orginValue = encrypt.aes.decrypt(this.data.value, this.data.key);
       } else {
         this.$message.error('请输入解密内容');
       }
