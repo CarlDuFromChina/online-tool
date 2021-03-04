@@ -33,9 +33,9 @@ export default {
 }
 
 .ant-menu {
-  text-align: left;
-  max-width: 70%;
-  margin: 0 auto;
+  text-align: left !important;
+  max-width: 70% !important;
+  margin: 0 auto !important;
 }
 
 .index {
