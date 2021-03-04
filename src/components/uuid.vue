@@ -14,6 +14,15 @@
         清空
       </a-button>
     </a-form-model-item>
+    <div style="background:#ECECEC; padding:30px 0">
+      <a-card title="功能介绍">
+        <p>
+          UUID全称：Universally Unique Identifier，即通用唯一识别码。 UUID是由一组32位数的16进制数字所构成，是故UUID理论上的总数为16^32 =
+          2^128，约等于3.4 x 10^38。也就是说若每纳秒产生1兆个UUID，要花100亿年才会将所有UUID用完。
+          UUID的标准型式包含32个16进制数字，以连字号分为五段，形式为8-4-4-4-12的32个字符，如：550e8400-e29b-41d4-a716-446655440000。
+        </p>
+      </a-card>
+    </div>
   </a-form-model>
 </template>
 
