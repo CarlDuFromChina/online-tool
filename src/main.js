@@ -9,6 +9,7 @@ import 'web-core';
 
 Vue.config.productionTip = false;
 Vue.use(Antd);
+Vue.prototype.$bus = new Vue();
 
 /* eslint-disable no-new */
 new Vue({
