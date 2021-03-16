@@ -17,6 +17,10 @@ export default new Router({
       name: 'uuid',
       path: '/index/uuid',
       component: () => import('../components/uuid/index')
+    }, {
+      name: 'json',
+      path: '/index/json',
+      component: () => import('../components/json/index')
     }],
     component: index
   }, {
