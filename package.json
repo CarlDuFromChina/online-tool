@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "ant-design-vue": "^1.7.4",
-    "autosize": "^4.0.2",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "vue": "^2.6.11",

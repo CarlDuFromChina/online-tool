@@ -4,7 +4,7 @@
       <a-input type="number" v-model="data.count" />
     </a-form-model-item>
     <a-form-model-item label="生成">
-      <a-textarea v-model="data.value" :rows="10" />
+      <a-textarea v-model="data.value" :autoSize="{ minRows: 10, maxRows: 20 }" />
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }" style="text-align: right">
       <a-button type="primary" @click="generate">
@@ -28,7 +28,6 @@
 
 <script>
 import { uuid } from 'web-core';
-import autosize from 'autosize';
 
 export default {
   name: 'uuid',
@@ -45,8 +44,8 @@ export default {
           { required: true, message: '请输入生成数量', trigger: 'blur' },
           {
             validator: (rule, value, callback) => {
-              if (value < 1 || value > 10) {
-                return callback('生成数量大于1小于10');
+              if (value < 1 || value > 20) {
+                return callback('生成数量大于1小于20');
               }
               return callback();
             }
@@ -54,9 +53,6 @@ export default {
         ]
       }
     };
-  },
-  mounted() {
-    autosize(document.querySelector('textarea'));
   },
   methods: {
     reset() {
