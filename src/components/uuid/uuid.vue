@@ -28,6 +28,7 @@
 
 <script>
 import { uuid } from 'web-core';
+import autosize from 'autosize';
 
 export default {
   name: 'uuid',
@@ -53,6 +54,9 @@ export default {
         ]
       }
     };
+  },
+  mounted() {
+    autosize(document.querySelector('textarea'));
   },
   methods: {
     reset() {
