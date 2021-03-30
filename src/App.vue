@@ -18,6 +18,6 @@ export default {
 }
 
 body {
-  background: #ececec;
+  background: #ececec !important;
 }
 </style>
