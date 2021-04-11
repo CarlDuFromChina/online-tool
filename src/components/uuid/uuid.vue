@@ -63,7 +63,7 @@ export default {
         if (resp) {
           const uuids = [];
           for (let i = 0; i < this.data.count; i++) {
-            uuids.push(uuid.generate());
+            uuids.push(uuid.generate().toUpperCase());
           }
           this.data.value = uuids.join('\r\n');
         }
