@@ -1,4 +1,4 @@
-from node:12
+from node:12-alpine
 
 # 创建人
 MAINTAINER 18556906294@163.com
@@ -7,7 +7,7 @@ MAINTAINER 18556906294@163.com
 RUN mkdir /package
 WORKDIR /package
 COPY package.json /package/
-RUN npm install
+RUN npm install --registry=http://npm.karldu.cn
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
@@ -21,4 +21,4 @@ ENV PORT 8080
 EXPOSE 8080
 
 # 容器启动时执行的命令
-CMD ["npm", "start"]
+CMD ["npm", "run", "prod"]
