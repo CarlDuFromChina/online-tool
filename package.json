@@ -2,11 +2,10 @@
   "name": "online-tool",
   "version": "1.0.0",
   "description": "online tool",
-  "author": "18556906294@163.com",
-  "private": true,
+  "author": "carldu",
+  "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "prod": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.prod.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
@@ -14,12 +13,12 @@
   "dependencies": {
     "ant-design-vue": "^1.7.4",
     "less": "^3.10.3",
-    "less-loader": "^5.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.0.1",
     "web-core": "1.0.10"
   },
   "devDependencies": {
+    "less-loader": "^5.0.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
