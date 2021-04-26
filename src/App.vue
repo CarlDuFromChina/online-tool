@@ -20,4 +20,9 @@ export default {
 body {
   background: #ececec !important;
 }
+
+#nprogress .bar {
+  background: #66b1ff !important;
+  height: 2px !important;
+}
 </style>

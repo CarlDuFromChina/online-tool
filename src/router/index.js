@@ -1,10 +1,13 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import index from '../components/index';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 
 Vue.use(Router);
+NProgress.configure({ showSpinner: false }); //我这里只关闭进度环
 
-export default new Router({
+const router = new Router({
   routes: [{
     name: 'index',
     path: '/index',
@@ -28,3 +31,13 @@ export default new Router({
     redirect: 'index'
   }]
 });
+
+router.beforeEach((to, from, next) => {
+  NProgress.start()
+  next()
+})
+router.afterEach(() => {
+  NProgress.done()
+})
+
+export default router;
