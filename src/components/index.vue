@@ -5,7 +5,7 @@
         <a-menu-item key="uuid">UUID</a-menu-item>
         <a-menu-item key="encrypt">编码/加密</a-menu-item>
         <a-menu-item key="json">JSON 工具 </a-menu-item>
-        <a-menu-item key="formatter" disabled>格式化 </a-menu-item>
+        <a-menu-item key="formatter">格式化 </a-menu-item>
         <a-menu-item key="service" disabled>服务 </a-menu-item>
       </a-menu>
     </div>

@@ -24,6 +24,10 @@ const router = new Router({
       name: 'json',
       path: '/index/json',
       component: () => import('../components/json/index')
+    }, {
+      name: 'formatter',
+      path: '/index/formatter',
+      component: () => import('../components/formatter/index')
     }],
     component: index
   }, {
