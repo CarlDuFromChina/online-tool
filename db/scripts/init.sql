@@ -33,3 +33,11 @@ CREATE TABLE users(
   user_pwd VARCHAR(200) NOT NULL,
   createdon TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE operation_log(
+  operation_logid VARCHAR(100) NOT NULL PRIMARY KEY,
+  request_ip VARCHAR(100),
+  object_code VARCHAR(100) NOT NULL,
+  operation_type VARCHAR(100) NOT NULL,
+  createdon TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+);

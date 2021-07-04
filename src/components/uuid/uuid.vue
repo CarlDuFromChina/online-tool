@@ -28,9 +28,11 @@
 
 <script>
 import { uuid } from 'web-core';
+import crud from '@/mixins/crud';
 
 export default {
   name: 'uuid',
+  mixins: [crud],
   data() {
     return {
       labelCol: { span: 4 },
@@ -51,7 +53,8 @@ export default {
             }
           }
         ]
-      }
+      },
+      entityName: 'operation_log'
     };
   },
   methods: {
@@ -66,6 +69,12 @@ export default {
             uuids.push(uuid.generate().toUpperCase());
           }
           this.data.value = uuids.join('\r\n');
+          this.createData({
+            operation_logid: uuid.generate().toUpperCase(),
+            request_ip: 'unkown',
+            object_code: 'uuid',
+            operation_type: 'create'
+          });
         }
       });
     }
