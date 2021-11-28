@@ -9,19 +9,16 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "build-docker-web": "yarn install & yarn build -r & docker build -t carldu/online-tool .",
-    "build-docker-db": "cd ./db & docker build -t carldu/online-tool-db .",
-    "publish-docker-web": "docker push carldu/online-tool",
-    "publish-docker-db": "docker push carldu/online-tool-db",
-    "up": "docker-compose up -d"
+    "build-docker": "docker build -t carldu/online-tool:latest .",
+    "publish-docker": "docker push carldu/online-tool:latest"
   },
   "dependencies": {
+    "@sixpence/web-core": "^1.0.21",
     "ant-design-vue": "^1.7.4",
     "axios": "^0.21.1",
     "less": "^3.10.3",
     "vue": "^2.6.11",
-    "vue-router": "^3.0.1",
-    "web-core": "1.0.10"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
